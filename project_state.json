@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "A dark-themed gamified self-improvement web app called 'LevelUp' with RPG/anime aesthetics, featuring a welcome screen, dashboard with XP system and quest cards, and bottom navigation",
+  "architectural_notes": [
+    "React-based mobile-first web application",
+    "Dark theme with purple and blue neon glowing accents",
+    "RPG/anime aesthetic design language",
+    "Gemini API integration for AI chat assistant using fetch with system instruction for SYSTEM character",
+    "Animation system for XP gain feedback and quest completion",
+    "Particle effects system for welcome screen background animation"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-welcome-screen-with-dark-background-displaying-welcome-player-text-and-a-begin-your-journey-button-that-navigates-to-the-dashboard",
+      "title": "Create a welcome screen with dark background, displaying 'Welcome, Player' text and a 'Begin Your Journey' button that navigates to the dashboard",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-dashboard-screen-displaying-player-name-level-1-an-xp-progress-bar-showing-progress-toward-next-level-and-a-section-with-3-sample-habit-cards-labeled-as-quests",
+      "title": "Create a dashboard screen displaying player name, Level 1, an XP progress bar showing progress toward next level, and a section with 3 sample habit cards labeled as 'quests'",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-bottom-navigation-bar-with-four-sections-home-chat-leaderboard-and-profile-allowing-navigation-between-screens",
+      "title": "Implement a bottom navigation bar with four sections: Home, Chat, Leaderboard, and Profile, allowing navigation between screens",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-dark-themed-rpg-anime-aesthetic-with-purple-and-blue-neon-glowing-accents-throughout-the-app-ensuring-smooth-and-modern-ui-with-mobile-first-responsive-design",
+      "title": "Apply a dark-themed RPG anime aesthetic with purple and blue neon glowing accents throughout the app, ensuring smooth and modern UI with mobile-first responsive design",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-comprehensive-dark-theme-across-entire-app-with-background-color-0a0a0f-card-backgrounds-1a1a2e-secondary-cards-inputs-16213e-all-text-in-white-or-e2e8f0-accent-color-7c3aed-purple-buttons-with-purple-gradient-from-7c3aed-to-4f46e5-xp-bar-with-glowing-purple-fill-and-soft-glow-shadow-effect-subtle-purple-blue-glow-on-all-cards-using-box-shadow-and-bottom-navigation-bar-with-dark-1a1a2e-background-and-purple-active-icon",
+      "title": "Apply comprehensive dark theme across entire app with background color #0a0a0f, card backgrounds #1a1a2e, secondary cards/inputs #16213e, all text in white or #e2e8f0, accent color #7c3aed (purple), buttons with purple gradient from #7c3aed to #4f46e5, XP bar with glowing purple fill and soft glow shadow effect, subtle purple/blue glow on all cards using box-shadow, and bottom navigation bar with dark #1a1a2e background and purple active icon",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-upgrade-welcome-screen-with-animated-glowing-background-featuring-slow-moving-purple-and-blue-gradient-animation-particle-effects-or-floating-orbs-in-background-glowing-purple-text-effect-on-welcome-player-text-and-dramatic-subtitle-your-system-awaits-begin-your-ascent",
+      "title": "Upgrade Welcome screen with animated glowing background featuring slow moving purple and blue gradient animation, particle effects or floating orbs in background, glowing purple text effect on 'Welcome, Player' text, and dramatic subtitle 'Your system awaits. Begin your ascent.'",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-upgrade-dashboard-quest-cards-with-dark-background-and-purple-left-border-glow-implement-satisfying-animation-when-checkbox-is-clicked-that-adds-xp-to-the-bar-display-a-popup-notification-saying-50-xp-gained-when-xp-is-added-ensure-xp-bar-animates-smoothly-when-xp-increases-and-add-a-small-fire-emoji-next-to-streak-numbers-on-quest-cards",
+      "title": "Upgrade Dashboard quest cards with dark background and purple left border glow, implement satisfying animation when checkbox is clicked that adds XP to the bar, display a popup notification saying '+50 XP gained!' when XP is added, ensure XP bar animates smoothly when XP increases, and add a small fire emoji (🔥) next to streak numbers on quest cards",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-ai-chat-screen-accessible-from-bottom-navigation-chat-tab-featuring-dark-themed-chat-interface-with-ai-assistant-avatar-glowing-purple-orb-and-name-system-at-top-chat-bubbles-with-user-messages-on-right-in-purple-and-ai-messages-on-left-in-dark-card-style-text-input-with-send-button-at-bottom-hardcoded-opening-messages-from-system-greetings-player-i-am-your-system-i-have-been-assigned-to-guide-your-ascent-tell-me-what-quest-shall-we-conquer-today-integration-with-gemini-api-using-fetch-to-endpoint-https-generativelanguage-googleapis-com-v1beta-models-gemini-1-5-flash-generatecontent-key-your-gemini-api-key-with-post-method-containing-usermessage-in-contents-array-and-systeminstruction-defining-system-as-dramatic-anime-mentor-assistant-keep-responses-short-and-punchy-max-3-sentences-parse-and-display-api-response-as-chat-bubble-from-system-and-show-animated-typing-indicator-animated-dots-while-waiting-for-response",
+      "title": "Build AI Chat screen accessible from bottom navigation Chat tab, featuring dark themed chat interface with AI assistant avatar (glowing purple orb) and name 'SYSTEM' at top, chat bubbles with user messages on right in purple and AI messages on left in dark card style, text input with send button at bottom, hardcoded opening messages from SYSTEM ('Greetings, Player. I am your System.', 'I have been assigned to guide your ascent.', 'Tell me — what quest shall we conquer today?'), integration with Gemini API using fetch to endpoint https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=YOUR_GEMINI_API_KEY with POST method containing userMessage in contents array and systemInstruction defining SYSTEM as dramatic anime mentor assistant (keep responses short and punchy, max 3 sentences), parse and display API response as chat bubble from SYSTEM, and show animated typing indicator (animated dots) while waiting for response",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-leaderboard-screen-accessible-from-bottom-navigation-leaderboard-tab-displaying-a-list-of-10-sample-players-with-rank-number-player-name-level-and-xp-highlight-rank-1-with-gold-glow-effect-rank-2-with-silver-glow-rank-3-with-bronze-glow-highlight-current-player-shadow-with-purple-glow-effect-and-apply-dark-themed-clean-and-sharp-design-consistent-with-app-aesthetics",
+      "title": "Build Leaderboard screen accessible from bottom navigation Leaderboard tab, displaying a list of 10 sample players with rank number, player name, level, and XP, highlight rank 1 with gold glow effect, rank 2 with silver glow, rank 3 with bronze glow, highlight current player 'Shadow' with purple glow effect, and apply dark themed clean and sharp design consistent with app aesthetics",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Welcome screen with 'Welcome, Player' and 'Begin Your Journey' button",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Dashboard screen with player name, Level 1, XP progress bar, and 3 sample quest cards with checkboxes and streak counters",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Bottom navigation bar with Home, Chat, Leaderboard, Profile",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Enhanced dark theme with specific color palette (#0a0a0f background, #1a1a2e cards, purple gradients, glowing effects)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Welcome screen upgrade with animated glowing background, particle effects, glowing text, and dramatic subtitle",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Dashboard upgrade with purple-glowing quest cards, XP gain animations, +50 XP popups, and fire emoji on streaks",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "AI Chat screen with SYSTEM assistant, Gemini API integration, dark themed chat bubbles, typing indicator",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Leaderboard screen with 10 sample players, ranked medals (gold/silver/bronze glow), current player highlighted",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "LevelUp",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,18 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router configuration, defining routes for Welcome, Dashboard, Chat, Leaderboard, and Profile pages with a layout wrapper for bottom navigation.",
+  "frontend/src/pages/Welcome.tsx": "Welcome screen with animated purple/blue gradient background, floating particle orbs, glowing \"Welcome, Player\" text, dramatic subtitle \"Your system awaits. Begin your ascent.\", and purple gradient button.",
+  "frontend/src/pages/Dashboard.tsx": "Dashboard page with dark theme, player stats, animated XP progress bar with purple glow, quest cards with completion tracking, XP notification popup on quest completion, and smooth XP bar animation.",
+  "frontend/src/pages/Chat.tsx": "AI chat interface with SYSTEM avatar (glowing purple orb), hardcoded opening messages, user messages on right (purple), AI messages on left (dark cards), Gemini API integration, typing indicator, and text input with send button.",
+  "frontend/src/pages/Leaderboard.tsx": "Leaderboard screen displaying 10 ranked players with gold/silver/bronze glows for top 3, purple highlight for current player \"Shadow\", showing rank, name, level, and XP in dark themed cards.",
+  "frontend/src/pages/Profile.tsx": "Placeholder Profile page component with centered \"Coming Soon\" message and user icon.",
+  "frontend/src/components/QuestCard.tsx": "Quest card component with dark background, glowing purple left border, fire emoji next to streak, checkbox with pop animation on click, and XP reward display.",
+  "frontend/src/components/BottomNav.tsx": "Bottom navigation bar with dark #1a1a2e background, four tabs (Home, Chat, Leaderboard, Profile), and purple glow effect on active tab icon.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for future React Query hooks when backend integration is added.",
+  "frontend/src/index.css": "Global styles with comprehensive dark theme (#0a0a0f background, #1a1a2e cards, #16213e secondary), purple accent colors (#7c3aed), glow effects, gradient animations, and utility classes for all visual effects including gold/silver/bronze glows for leaderboard.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with dark theme color palette including background (#0a0a0f), card (#1a1a2e), secondary (#16213e), neon-purple (#7c3aed), neon-blue (#60a5fa), and purple gradient colors for consistent theming.",
+  "frontend/src/components/XPNotification.tsx": "Popup notification component displaying \"+X XP gained!\" message with purple gradient background, glow effect, and fade-in/zoom animation.",
+  "frontend/src/components/ChatBubble.tsx": "Reusable chat message bubble component with conditional styling for user messages (purple background, right-aligned) and AI messages (dark card background, left-aligned).",
+  "frontend/src/components/TypingIndicator.tsx": "Animated typing indicator with three pulsing purple dots displayed while waiting for AI response in chat.",
+  "frontend/src/components/LeaderboardEntry.tsx": "Leaderboard player entry component displaying rank with medal emoji for top 3, player name, level, XP, and conditional glow effects (gold/silver/bronze for top 3, purple for current player).",
+  "frontend/src/hooks/useGeminiChat.ts": "Custom React hook for Gemini API integration with sendMessage function, loading state, error handling, and SYSTEM persona configuration for dramatic anime mentor responses."
+}

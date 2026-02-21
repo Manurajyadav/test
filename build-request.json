@@ -1,0 +1,156 @@
+{
+  "kind": "build_request",
+  "title": "Upgrade LevelUp app with enhanced dark theme, animations, AI chat, and leaderboard",
+  "projectName": "LevelUp",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-5",
+      "text": "Apply comprehensive dark theme across entire app with background color #0a0a0f, card backgrounds #1a1a2e, secondary cards/inputs #16213e, all text in white or #e2e8f0, accent color #7c3aed (purple), buttons with purple gradient from #7c3aed to #4f46e5, XP bar with glowing purple fill and soft glow shadow effect, subtle purple/blue glow on all cards using box-shadow, and bottom navigation bar with dark #1a1a2e background and purple active icon",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Background: #0a0a0f",
+          "Card backgrounds: #1a1a2e",
+          "Accent color: #7c3aed (purple)",
+          "Buttons: purple gradient #7c3aed to #4f46e5"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All app screens use #0a0a0f as primary background color",
+        "All card components use #1a1a2e background",
+        "All text is rendered in white or #e2e8f0",
+        "All buttons have purple gradient from #7c3aed to #4f46e5",
+        "XP progress bar has glowing purple fill with soft shadow",
+        "All cards have subtle purple/blue box-shadow glow effect",
+        "Bottom navigation bar uses #1a1a2e background with purple highlighting on active tab"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Upgrade Welcome screen with animated glowing background featuring slow moving purple and blue gradient animation, particle effects or floating orbs in background, glowing purple text effect on 'Welcome, Player' text, and dramatic subtitle 'Your system awaits. Begin your ascent.'",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Add animated glowing background — slow moving purple and blue gradient animation",
+          "Add particle effects or floating orbs in background",
+          "Make \"Welcome, Player\" text glow in purple",
+          "Add a dramatic subtitle: \"Your system awaits. Begin your ascent.\""
+        ]
+      },
+      "acceptanceCriteria": [
+        "Welcome screen displays animated purple and blue gradient background with smooth movement",
+        "Particle effects or floating orbs are visible in the background",
+        "'Welcome, Player' text has purple glow effect applied",
+        "Subtitle 'Your system awaits. Begin your ascent.' is displayed below the welcome text"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Upgrade Dashboard quest cards with dark background and purple left border glow, implement satisfying animation when checkbox is clicked that adds XP to the bar, display a popup notification saying '+50 XP gained!' when XP is added, ensure XP bar animates smoothly when XP increases, and add a small fire emoji (🔥) next to streak numbers on quest cards",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Quest cards should have dark background with purple left border glow",
+          "When a checkbox is clicked: show a satisfying animation, add XP to the bar, show a popup saying \"+50 XP gained!\"",
+          "XP bar should animate smoothly when XP is added",
+          "Add a small fire emoji next to streak numbers"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Quest cards display dark background with glowing purple left border",
+        "Clicking a quest checkbox triggers a satisfying visual animation",
+        "XP is added to progress bar when checkbox is clicked",
+        "A popup notification displaying '+50 XP gained!' appears when XP is added",
+        "XP progress bar animates smoothly with a transition effect when value increases",
+        "Fire emoji (🔥) appears next to streak counter on each quest card"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Build AI Chat screen accessible from bottom navigation Chat tab, featuring dark themed chat interface with AI assistant avatar (glowing purple orb) and name 'SYSTEM' at top, chat bubbles with user messages on right in purple and AI messages on left in dark card style, text input with send button at bottom, hardcoded opening messages from SYSTEM ('Greetings, Player. I am your System.', 'I have been assigned to guide your ascent.', 'Tell me — what quest shall we conquer today?'), integration with Gemini API using fetch to endpoint https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=YOUR_GEMINI_API_KEY with POST method containing userMessage in contents array and systemInstruction defining SYSTEM as dramatic anime mentor assistant (keep responses short and punchy, max 3 sentences), parse and display API response as chat bubble from SYSTEM, and show animated typing indicator (animated dots) while waiting for response",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "When user clicks Chat in bottom nav, open the chat screen",
+          "Dark themed chat interface",
+          "At the top: AI assistant avatar (glowing purple orb) with name \"SYSTEM\"",
+          "Chat bubbles: user messages on right (purple), AI messages on left (dark card)",
+          "Connect to Gemini API using this fetch call with my API key as a placeholder \"YOUR_GEMINI_API_KEY\"",
+          "Parse the response and display it as a chat bubble from SYSTEM",
+          "Show a typing indicator (animated dots) while waiting for response"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Chat screen is accessible by clicking Chat tab in bottom navigation",
+        "Chat interface uses dark theme consistent with app-wide theme",
+        "Top of chat displays glowing purple orb avatar with 'SYSTEM' label",
+        "User messages appear on right side with purple styling",
+        "AI messages appear on left side with dark card styling",
+        "Text input field and send button are positioned at bottom of screen",
+        "Three hardcoded opening messages from SYSTEM appear when chat screen first loads",
+        "Sending user message triggers POST request to Gemini API endpoint with user message in contents array",
+        "Request includes systemInstruction with SYSTEM persona description",
+        "API response is parsed and displayed as new chat bubble from SYSTEM",
+        "Animated typing indicator (dots) is shown while waiting for API response"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Build Leaderboard screen accessible from bottom navigation Leaderboard tab, displaying a list of 10 sample players with rank number, player name, level, and XP, highlight rank 1 with gold glow effect, rank 2 with silver glow, rank 3 with bronze glow, highlight current player 'Shadow' with purple glow effect, and apply dark themed clean and sharp design consistent with app aesthetics",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Build the leaderboard screen when user clicks Leaderboard in nav",
+          "Show a list of 10 sample players with rank, name, level, XP",
+          "Highlight rank 1 with a gold glow, rank 2 silver, rank 3 bronze",
+          "Current player (\"Shadow\") highlighted in purple",
+          "Dark themed, clean and sharp design"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Leaderboard screen is accessible by clicking Leaderboard tab in bottom navigation",
+        "Screen displays a list of exactly 10 sample players",
+        "Each player entry shows rank number, player name, level, and XP",
+        "Rank 1 player has gold glow effect applied",
+        "Rank 2 player has silver glow effect applied",
+        "Rank 3 player has bronze glow effect applied",
+        "Player named 'Shadow' (current player) has purple glow effect applied",
+        "Design uses dark theme consistent with app-wide color palette",
+        "Layout is clean and sharp with clear visual hierarchy"
+      ]
+    }
+  ],
+  "constraints": [
+    "Keep all existing functionality intact — do not break anything already working",
+    "Maintain existing Welcome screen navigation to Dashboard",
+    "Preserve existing quest card completion and streak tracking logic",
+    "Maintain bottom navigation bar functionality for all four tabs"
+  ],
+  "nonGoals": [
+    "Backend implementation or data persistence",
+    "Real Gemini API key — use placeholder 'YOUR_GEMINI_API_KEY'",
+    "User authentication or profile management",
+    "Actual leaderboard data fetching — use sample/mock data",
+    "Quest creation or editing functionality"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

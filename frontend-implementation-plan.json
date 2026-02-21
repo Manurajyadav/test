@@ -1,0 +1,184 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Upgrade LevelUp app with enhanced dark theme, animations, AI chat, and leaderboard",
+  "requirements": [
+    {
+      "id": "REQ-5",
+      "summary": "Apply comprehensive dark theme across entire app with purple accent colors, glowing effects, and gradient buttons",
+      "acceptanceCriteria": [
+        "All app screens use #0a0a0f as primary background color",
+        "All card components use #1a1a2e background",
+        "All text is rendered in white or #e2e8f0",
+        "All buttons have purple gradient from #7c3aed to #4f46e5",
+        "XP progress bar has glowing purple fill with soft shadow",
+        "All cards have subtle purple/blue box-shadow glow effect",
+        "Bottom navigation bar uses #1a1a2e background with purple highlighting on active tab"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update global styles and CSS custom properties to implement the comprehensive dark theme. Replace existing color values with #0a0a0f for background, #1a1a2e for card backgrounds, #16213e for secondary elements, white/#e2e8f0 for text, and #7c3aed for primary accent. Add utility classes for purple gradient buttons (from #7c3aed to #4f46e5), glowing purple XP bar effects with soft shadow, and purple/blue box-shadow glow for cards. Ensure all existing neon utility classes are updated to match the new color scheme."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Update Tailwind configuration to extend theme with the new dark color palette. Add color definitions for background (#0a0a0f), card (#1a1a2e), secondary (#16213e), text colors (white, #e2e8f0), and accent purple (#7c3aed, #4f46e5). Configure gradient utilities for purple button gradients. Add custom box-shadow utilities for purple/blue glow effects on cards. Ensure compatibility with existing neon-purple and neon-blue values."
+        },
+        {
+          "path": "frontend/src/components/BottomNav.tsx",
+          "operation": "modify",
+          "description": "Update BottomNav component to use #1a1a2e as background color instead of current styling. Ensure active tab icons display purple highlight using #7c3aed accent color. Maintain existing navigation functionality and glow effects while applying the new dark theme color scheme."
+        },
+        {
+          "path": "frontend/src/components/QuestCard.tsx",
+          "operation": "modify",
+          "description": "Apply dark theme styling to QuestCard component with #1a1a2e background and subtle purple/blue box-shadow glow. Ensure text uses white or #e2e8f0 color. Maintain existing functionality for habit display, checkbox, streak counter, and XP reward while updating visual appearance to match comprehensive dark theme."
+        },
+        {
+          "path": "frontend/src/pages/Dashboard.tsx",
+          "operation": "modify",
+          "description": "Update Dashboard page to use #0a0a0f background color and ensure all card elements use the new dark theme colors. Update XP progress bar styling to use glowing purple fill (#7c3aed) with soft glow shadow effect. Apply #1a1a2e background to player stats card and quest cards container. Ensure all text uses white or #e2e8f0. Maintain existing quest management functionality."
+        },
+        {
+          "path": "frontend/src/pages/Welcome.tsx",
+          "operation": "modify",
+          "description": "Apply dark theme background color #0a0a0f to Welcome page. Update 'Begin Your Journey' button to use purple gradient from #7c3aed to #4f46e5. Ensure welcome text uses white or #e2e8f0 color. Maintain existing animated background and navigation functionality while updating visual styling to match comprehensive dark theme."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Upgrade Welcome screen with animated glowing background, particle effects, glowing text, and dramatic subtitle",
+      "acceptanceCriteria": [
+        "Welcome screen displays animated purple and blue gradient background with smooth movement",
+        "Particle effects or floating orbs are visible in the background",
+        "'Welcome, Player' text has purple glow effect applied",
+        "Subtitle 'Your system awaits. Begin your ascent.' is displayed below the welcome text"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Welcome.tsx",
+          "operation": "modify",
+          "description": "Enhance Welcome screen with animated glowing background featuring slow-moving purple and blue gradient animation using CSS keyframes or animated div elements. Add particle effects or floating orbs in the background layer using absolute positioned elements with animation. Apply purple glow text effect to 'Welcome, Player' heading using text-shadow with #7c3aed color. Add dramatic subtitle 'Your system awaits. Begin your ascent.' below the welcome text with appropriate styling. Maintain existing navigation to Dashboard on button click."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add CSS keyframe animations for the Welcome screen's moving purple and blue gradient background. Define animations for floating particle effects or orbs with smooth movement patterns. Add utility classes for purple glowing text effect using text-shadow. Ensure animations are performant and work smoothly across browsers."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Upgrade Dashboard quest cards with animations, XP notifications, and fire emoji streak indicator",
+      "acceptanceCriteria": [
+        "Quest cards display dark background with glowing purple left border",
+        "Clicking a quest checkbox triggers a satisfying visual animation",
+        "XP is added to progress bar when checkbox is clicked",
+        "A popup notification displaying '+50 XP gained!' appears when XP is added",
+        "XP progress bar animates smoothly with a transition effect when value increases",
+        "Fire emoji (🔥) appears next to streak counter on each quest card"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/QuestCard.tsx",
+          "operation": "modify",
+          "description": "Update QuestCard to add glowing purple left border using border-l-4 with #7c3aed and box-shadow glow. Add fire emoji (🔥) next to the streak number display. Implement satisfying checkbox click animation using CSS transitions or React animations (scale, fade, or bounce effect). Emit an event or callback when checkbox is toggled to trigger XP addition in parent component. Maintain existing completion and streak tracking logic."
+        },
+        {
+          "path": "frontend/src/pages/Dashboard.tsx",
+          "operation": "modify",
+          "description": "Handle quest completion events from QuestCard components. When a quest is marked complete, add XP to the player's total (e.g., +50 XP per quest). Trigger smooth animation on XP progress bar using CSS transition on the fill width. Display a popup notification component showing '+50 XP gained!' with fade-in/fade-out animation positioned near the XP bar or center screen. Manage notification state to auto-dismiss after a few seconds. Ensure XP bar smoothly animates to new value with purple glowing fill effect."
+        },
+        {
+          "path": "frontend/src/components/XPNotification.tsx",
+          "operation": "create",
+          "description": "Create reusable XPNotification component to display '+50 XP gained!' popup message. Implement as a fixed or absolute positioned element with fade-in/fade-out animation. Style with dark theme colors, purple accent, and glowing effect. Accept props for XP amount and visibility state. Use CSS transitions or React animation library for smooth appearance and disappearance."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add CSS animations for quest card checkbox interaction (scale, pulse, or bounce effect). Add transition styles for smooth XP progress bar width changes with easing function. Add keyframe animations for XP notification popup (fade-in, hold, fade-out). Ensure animations are performant and visually satisfying."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Build AI Chat screen with SYSTEM assistant, Gemini API integration, and animated typing indicator",
+      "acceptanceCriteria": [
+        "Chat screen is accessible by clicking Chat tab in bottom navigation",
+        "Chat interface uses dark theme consistent with app-wide theme",
+        "Top of chat displays glowing purple orb avatar with 'SYSTEM' label",
+        "User messages appear on right side with purple styling",
+        "AI messages appear on left side with dark card styling",
+        "Text input field and send button are positioned at bottom of screen",
+        "Three hardcoded opening messages from SYSTEM appear when chat screen first loads",
+        "Sending user message triggers POST request to Gemini API endpoint with user message in contents array",
+        "Request includes systemInstruction with SYSTEM persona description",
+        "API response is parsed and displayed as new chat bubble from SYSTEM",
+        "Animated typing indicator (dots) is shown while waiting for API response"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Chat.tsx",
+          "operation": "modify",
+          "description": "Replace placeholder Chat page with full-featured AI chat interface. Display glowing purple orb avatar at top with 'SYSTEM' label using CSS for orb styling (radial gradient, box-shadow glow with #7c3aed). Initialize chat with three hardcoded opening messages from SYSTEM: 'Greetings, Player. I am your System.', 'I have been assigned to guide your ascent.', 'Tell me — what quest shall we conquer today?'. Implement chat message list displaying user messages on right (purple bubble styling) and AI messages on left (dark card styling with #1a1a2e). Add text input field and send button at bottom with purple gradient button styling. Manage chat state with React useState for messages array. On send, add user message to state, show typing indicator, call Gemini API, parse response, and add SYSTEM message to state. Use dark theme colors throughout (#0a0a0f background, white text). Note: Gemini API integration uses fetch with placeholder API key 'YOUR_GEMINI_API_KEY' as specified in BuildRequest."
+        },
+        {
+          "path": "frontend/src/components/ChatBubble.tsx",
+          "operation": "create",
+          "description": "Create reusable ChatBubble component to render individual chat messages. Accept props for message content, sender type (user or AI), and timestamp. Style user messages with purple background (#7c3aed) aligned right. Style AI messages with dark card background (#1a1a2e) aligned left. Use white or #e2e8f0 text color. Add appropriate padding, border-radius, and margin for chat bubble appearance."
+        },
+        {
+          "path": "frontend/src/components/TypingIndicator.tsx",
+          "operation": "create",
+          "description": "Create TypingIndicator component displaying animated dots to show AI is thinking. Implement three dots with staggered fade or bounce animation using CSS keyframes. Style with dark theme and position as a chat bubble on the left side. Make component conditionally rendered based on loading state from parent Chat component."
+        },
+        {
+          "path": "frontend/src/hooks/useGeminiChat.ts",
+          "operation": "create",
+          "description": "Create custom React hook useGeminiChat to handle Gemini API integration. Implement function to send POST request to https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=YOUR_GEMINI_API_KEY with user message in contents array and systemInstruction defining SYSTEM persona as dramatic anime mentor (keep responses short and punchy, max 3 sentences). Parse JSON response to extract AI message text from response.candidates[0].content.parts[0].text. Return hook interface with sendMessage function, loading state, and error handling. Use fetch API for HTTP request."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add CSS animations for typing indicator dots (staggered fade or bounce animation using keyframes). Add styles for glowing purple orb avatar (radial gradient background, box-shadow glow with #7c3aed). Add utility classes for chat bubble layouts (flex, alignment, spacing). Ensure smooth scrolling behavior for chat message container."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Build Leaderboard screen displaying ranked players with gold/silver/bronze glow effects and current player highlight",
+      "acceptanceCriteria": [
+        "Leaderboard screen is accessible by clicking Leaderboard tab in bottom navigation",
+        "Screen displays a list of exactly 10 sample players",
+        "Each player entry shows rank number, player name, level, and XP",
+        "Rank 1 player has gold glow effect applied",
+        "Rank 2 player has silver glow effect applied",
+        "Rank 3 player has bronze glow effect applied",
+        "Player named 'Shadow' (current player) has purple glow effect applied",
+        "Design uses dark theme consistent with app-wide color palette",
+        "Layout is clean and sharp with clear visual hierarchy"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Leaderboard.tsx",
+          "operation": "modify",
+          "description": "Replace placeholder Leaderboard page with full leaderboard implementation. Display list of exactly 10 sample players with mock data including rank (1-10), player name, level, and XP values. Render each player as a card or list item showing all four data points. Apply gold glow effect (box-shadow with gold/yellow color) to rank 1 player. Apply silver glow effect (box-shadow with silver/gray color) to rank 2 player. Apply bronze glow effect (box-shadow with bronze/brown color) to rank 3 player. Highlight player named 'Shadow' with purple glow effect (box-shadow with #7c3aed) to indicate current player. Use dark theme styling with #0a0a0f background, #1a1a2e card backgrounds, and white/#e2e8f0 text. Create clean and sharp layout with clear visual hierarchy using spacing, typography, and alignment."
+        },
+        {
+          "path": "frontend/src/components/LeaderboardEntry.tsx",
+          "operation": "create",
+          "description": "Create reusable LeaderboardEntry component to render individual player rows in the leaderboard. Accept props for rank, playerName, level, XP, and isCurrentPlayer flag. Display rank number prominently (potentially with medal emoji for top 3). Show player name, level, and XP with appropriate typography hierarchy. Conditionally apply glow effects based on rank (gold for 1, silver for 2, bronze for 3) using box-shadow. Apply purple glow when isCurrentPlayer is true. Use dark theme card styling with #1a1a2e background and white text."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add utility classes for leaderboard glow effects: gold glow (box-shadow with gold/yellow color around #ffd700), silver glow (box-shadow with silver color around #c0c0c0), bronze glow (box-shadow with bronze color around #cd7f32), and purple glow for current player (box-shadow with #7c3aed). Ensure glow effects are subtle yet visible against dark background. Add any additional layout utilities needed for clean leaderboard presentation."
+        }
+      ]
+    }
+  ]
+}

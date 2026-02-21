@@ -1,0 +1,115 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-apply-comprehensive-dark-theme-across-entire-app-with-background-color-0a0a0f-card-backgrounds-1a1a2e-secondary-cards-inputs-16213e-all-text-in-white-or-e2e8f0-accent-color-7c3aed-purple-buttons-with-purple-gradient-from-7c3aed-to-4f46e5-xp-bar-with-glowing-purple-fill-and-soft-glow-shadow-effect-subtle-purple-blue-glow-on-all-cards-using-box-shadow-and-bottom-navigation-bar-with-dark-1a1a2e-background-and-purple-active-icon",
+      "featureTitle": "Apply comprehensive dark theme across entire app with background color #0a0a0f, card backgrounds #1a1a2e, secondary cards/inputs #16213e, all text in white or #e2e8f0, accent color #7c3aed (purple), buttons with purple gradient from #7c3aed to #4f46e5, XP bar with glowing purple fill and soft glow shadow effect, subtle purple/blue glow on all cards using box-shadow, and bottom navigation bar with dark #1a1a2e background and purple active icon",
+      "files": [
+        "frontend/src/components/BottomNav.tsx",
+        "frontend/src/components/QuestCard.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/Dashboard.tsx",
+        "frontend/src/pages/Welcome.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-upgrade-welcome-screen-with-animated-glowing-background-featuring-slow-moving-purple-and-blue-gradient-animation-particle-effects-or-floating-orbs-in-background-glowing-purple-text-effect-on-welcome-player-text-and-dramatic-subtitle-your-system-awaits-begin-your-ascent",
+      "featureTitle": "Upgrade Welcome screen with animated glowing background featuring slow moving purple and blue gradient animation, particle effects or floating orbs in background, glowing purple text effect on 'Welcome, Player' text, and dramatic subtitle 'Your system awaits. Begin your ascent.'",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/src/pages/Welcome.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-upgrade-dashboard-quest-cards-with-dark-background-and-purple-left-border-glow-implement-satisfying-animation-when-checkbox-is-clicked-that-adds-xp-to-the-bar-display-a-popup-notification-saying-50-xp-gained-when-xp-is-added-ensure-xp-bar-animates-smoothly-when-xp-increases-and-add-a-small-fire-emoji-next-to-streak-numbers-on-quest-cards",
+      "featureTitle": "Upgrade Dashboard quest cards with dark background and purple left border glow, implement satisfying animation when checkbox is clicked that adds XP to the bar, display a popup notification saying '+50 XP gained!' when XP is added, ensure XP bar animates smoothly when XP increases, and add a small fire emoji (🔥) next to streak numbers on quest cards",
+      "files": [
+        "frontend/src/components/QuestCard.tsx",
+        "frontend/src/components/XPNotification.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/Dashboard.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-ai-chat-screen-accessible-from-bottom-navigation-chat-tab-featuring-dark-themed-chat-interface-with-ai-assistant-avatar-glowing-purple-orb-and-name-system-at-top-chat-bubbles-with-user-messages-on-right-in-purple-and-ai-messages-on-left-in-dark-card-style-text-input-with-send-button-at-bottom-hardcoded-opening-messages-from-system-greetings-player-i-am-your-system-i-have-been-assigned-to-guide-your-ascent-tell-me-what-quest-shall-we-conquer-today-integration-with-gemini-api-using-fetch-to-endpoint-https-generativelanguage-googleapis-com-v1beta-models-gemini-1-5-flash-generatecontent-key-your-gemini-api-key-with-post-method-containing-usermessage-in-contents-array-and-systeminstruction-defining-system-as-dramatic-anime-mentor-assistant-keep-responses-short-and-punchy-max-3-sentences-parse-and-display-api-response-as-chat-bubble-from-system-and-show-animated-typing-indicator-animated-dots-while-waiting-for-response",
+      "featureTitle": "Build AI Chat screen accessible from bottom navigation Chat tab, featuring dark themed chat interface with AI assistant avatar (glowing purple orb) and name 'SYSTEM' at top, chat bubbles with user messages on right in purple and AI messages on left in dark card style, text input with send button at bottom, hardcoded opening messages from SYSTEM ('Greetings, Player. I am your System.', 'I have been assigned to guide your ascent.', 'Tell me — what quest shall we conquer today?'), integration with Gemini API using fetch to endpoint https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=YOUR_GEMINI_API_KEY with POST method containing userMessage in contents array and systemInstruction defining SYSTEM as dramatic anime mentor assistant (keep responses short and punchy, max 3 sentences), parse and display API response as chat bubble from SYSTEM, and show animated typing indicator (animated dots) while waiting for response",
+      "files": [
+        "frontend/src/components/ChatBubble.tsx",
+        "frontend/src/components/TypingIndicator.tsx",
+        "frontend/src/hooks/useGeminiChat.ts",
+        "frontend/src/index.css",
+        "frontend/src/pages/Chat.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-leaderboard-screen-accessible-from-bottom-navigation-leaderboard-tab-displaying-a-list-of-10-sample-players-with-rank-number-player-name-level-and-xp-highlight-rank-1-with-gold-glow-effect-rank-2-with-silver-glow-rank-3-with-bronze-glow-highlight-current-player-shadow-with-purple-glow-effect-and-apply-dark-themed-clean-and-sharp-design-consistent-with-app-aesthetics",
+      "featureTitle": "Build Leaderboard screen accessible from bottom navigation Leaderboard tab, displaying a list of 10 sample players with rank number, player name, level, and XP, highlight rank 1 with gold glow effect, rank 2 with silver glow, rank 3 with bronze glow, highlight current player 'Shadow' with purple glow effect, and apply dark themed clean and sharp design consistent with app aesthetics",
+      "files": [
+        "frontend/src/components/LeaderboardEntry.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/Leaderboard.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
